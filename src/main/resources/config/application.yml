@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: seckill
+  profiles:
+    active: dev
+server:
+  port: 8088
+
