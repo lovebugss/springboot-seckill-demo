@@ -1,8 +1,36 @@
+
+server:
+  port: 8088
 spring:
   application:
     name: seckill
   profiles:
     active: dev
-server:
-  port: 8088
+  #thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
 
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  mappers: com.itrjp.seckill.util.BaseMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count\=countSql
+logging:
+  level:
+    com:
+      itrjp:
+        seckill:
+          mapper: debug

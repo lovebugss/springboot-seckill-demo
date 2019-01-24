@@ -1,9 +1,11 @@
-package com.itrjp;
+package com.itrjp.seckill;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan("com.itrjp.seckill.mapper")
 public class SeckillApplication {
 
 	public static void main(String[] args) {
